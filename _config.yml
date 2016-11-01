@@ -1,0 +1,29 @@
+title: 99Team
+subtitle: "99Team"
+keywords: "99Team"
+description: "99Team团队博客"
+author: 99Team
+language: zh-CN
+timezone: UTC
+url: http://krpano.milly.me
+root: /
+permalink: news/:year/:month/:day/:title/
+archive_dir: news
+code_dir: downloads/code
+new_post_name: :year-:month-:day-:title.md
+post_asset_folder: true # 启用Asset文件夹
+auto_spacing: true # 中文与英文之间加入空格
+filename_case: 1 # 将文字名转换为小写，2为大写
+highlight:
+  enable: true
+  line_number: false
+per_page: 0
+
+# 主题
+theme: hueman
+
+# 部署
+deploy:
+  type: git
+  repo: git@github.com:99team/99team.github.io.git
+  branch: gh-pages
