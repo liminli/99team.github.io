@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>99Team</title>
+  <subtitle>99Team</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://99team.github.io/"/>
+  <updated>2016-11-02T07:11:37.003Z</updated>
+  <id>https://99team.github.io/</id>
+  
+  <author>
+    <name>99Team</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vtour 文件夹说明</title>
+    <link href="https://99team.github.io/post/vtour/"/>
+    <id>https://99team.github.io/post/vtour/</id>
+    <published>2016-11-02T07:11:37.003Z</published>
+    <updated>2016-11-02T07:11:37.003Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="vtour-文件夹结构"><a href="#vtour-文件夹结构" class="headerlink" title="vtour 文件夹结构"></a>vtour 文件夹结构</h2><p>以下是默认与比较基础文件结构与文件名，根据<code>droplet</code>的不同，文件可能更多或更少，同时文件名也并不一定和这些一样。</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><div class="line">vtour/</div><div class="line">| -- panos/             #存放全景切片图片的文件夹</div><div class="line">| -- skin/              #存放皮肤相关文件</div><div class="line">| -- plugins/           #用来存放插件</div><div class="line">| -- tour.swf           #krpano flash viewer</div><div class="line">| -- tour.js            #krpano HTML5 viewer</div><div class="line">| -- tour.xml           #生成全景的相关配置</div><div class="line">| -- tour.html          #用来浏览全景的页面，需要本地服务环境</div><div class="line">| -- tour_editor.html   #添加热点（hotspot）与初始化视角的设置</div></pre></td></tr></table></figure>
+<h2 id="vtour-运作机制"><a href="#vtour-运作机制" class="headerlink" title="vtour 运作机制"></a>vtour 运作机制</h2><p>Krpano 是通过<code>viewer</code>引擎来实现浏览静态图片时产生“三维”效果，而这一切则是通过<code>tour.html</code>这个入口文件。</p>
+<p>过滤掉一些没用的代码，可以看到入口文件主代码如下：</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"pano"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"tour.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="undefined"></span></div><div class="line">embedpano(&#123;</div><div class="line">    swf: "tour.swf", //有则表示加载flash引擎，如果设置html5:only则不需要该值</div><div class="line">    xml: "tour.xml", //启动时的配置文件</div><div class="line">    target: "pano", //要渲染到的目标容器ID</div><div class="line">    html5: "only", //如果有需要用到flash，可设置为auto</div><div class="line">    //id: "krpanoSWFObject", //默认的krpano对象，每一个viewer对应唯一id，与JS交互时要用到</div><div class="line">    mobilescale: 1.0, //移动设备缩放，1表示不缩放，默认0.5</div><div class="line">    passQueryParameters: false //是否接受URL传参，例如：tour.html?html5=only&amp;startscene=scene2</div><div class="line">&#125;);</div><div class="line"><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;vtour-文件夹结构&quot;&gt;&lt;a href=&quot;#vtour-文件夹结构&quot; class=&quot;headerlink&quot; title=&quot;vtour 文件夹结构&quot;&gt;&lt;/a&gt;vtour 文件夹结构&lt;/h2&gt;&lt;p&gt;以下是默认与比较基础文件结构与文件名，根据&lt;code&gt;droplet
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Krpano 1.19 - WebVR</title>
+    <link href="https://99team.github.io/post/krpano-1-19/"/>
+    <id>https://99team.github.io/post/krpano-1-19/</id>
+    <published>2015-02-14T00:00:00.000Z</published>
+    <updated>2016-11-02T07:11:37.003Z</updated>
+    
+    <content type="html"><![CDATA[<p>这个版本是第一个直接内置支持虚拟现实与立体3D。</p>
+<img src="/post/krpano-1-19/krpano119-vr_rift.jpg" alt="krpano119-vr_rift.jpg" title="">]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;这个版本是第一个直接内置支持虚拟现实与立体3D。&lt;/p&gt;
+&lt;img src=&quot;/post/krpano-1-19/krpano119-vr_rift.jpg&quot; alt=&quot;krpano119-vr_rift.jpg&quot; title=&quot;&quot;&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Krpano 1.18 - HTML5 Panoramic Video</title>
+    <link href="https://99team.github.io/post/krpano-1-18/"/>
+    <id>https://99team.github.io/post/krpano-1-18/</id>
+    <published>2014-10-17T00:00:00.000Z</published>
+    <updated>2016-11-02T07:11:37.003Z</updated>
+    
+    <content type="html"><![CDATA[<p>该版本使用 WebGL 实现了全景视频，并做了较多性能提升。</p>
+<img src="/post/krpano-1-18/krpano118-video-airpano.jpg" alt="krpano118-video-airpano.jpg" title="">
+<img src="/post/krpano-1-18/krpano118-video-dimas.jpg" alt="krpano118-video-dimas.jpg" title="">]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;该版本使用 WebGL 实现了全景视频，并做了较多性能提升。&lt;/p&gt;
+&lt;img src=&quot;/post/krpano-1-18/krpano118-video-airpano.jpg&quot; alt=&quot;krpano118-video-airpano.jpg&quot; title=&quot;&quot;&gt;
+&lt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>krpano 1.17 - HTML5 Multiresolution</title>
+    <link href="https://99team.github.io/post/krpano-1-17/"/>
+    <id>https://99team.github.io/post/krpano-1-17/</id>
+    <published>2013-12-19T00:00:00.000Z</published>
+    <updated>2016-11-02T07:11:36.999Z</updated>
+    
+    <content type="html"><![CDATA[<p>该版本支持 HTML5 多种分辨率，并且合并了 Flash 与 HTML5 的许可，同时对许可文件的格式进行了变更，防止应文件损坏导致许可失效。</p>
+<img src="/post/krpano-1-17/krpano117-mres1.jpg" alt="krpano117-mres1.jpg" title="">
+<img src="/post/krpano-1-17/krpano117-mres2.jpg" alt="krpano117-mres2.jpg" title="">
+<img src="/post/krpano-1-17/krpano117-mres3.jpg" alt="krpano117-mres3.jpg" title="">
+<img src="/post/krpano-1-17/krpano117-mres4.jpg" alt="krpano117-mres4.jpg" title="">]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;该版本支持 HTML5 多种分辨率，并且合并了 Flash 与 HTML5 的许可，同时对许可文件的格式进行了变更，防止应文件损坏导致许可失效。&lt;/p&gt;
+&lt;img src=&quot;/post/krpano-1-17/krpano117-mres1.jpg&quot; alt=&quot;krpano
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>krpano 1.16 - HTML5 WebGL</title>
+    <link href="https://99team.github.io/post/krpano-1-16/"/>
+    <id>https://99team.github.io/post/krpano-1-16/</id>
+    <published>2013-03-28T00:00:00.000Z</published>
+    <updated>2016-11-02T07:11:36.995Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="WebGL-的支持"><a href="#WebGL-的支持" class="headerlink" title="WebGL 的支持"></a>WebGL 的支持</h2><p>使用 WebGL 取代之前的 CSS-3D 引擎，从而实现了鱼眼、小行星等，同时比 Flash 处理的更快更平滑，另外在纹理的处理上也更好，以下是两张对比图。</p>
+<img src="/post/krpano-1-16/krpano116-webgl-mipmapping-compare-1.jpg" alt="krpano116-webgl-mipmapping-compare-1.jpg" title="">
+<img src="/post/krpano-1-16/krpano116-webgl-mipmapping-compare-2.jpg" alt="krpano116-webgl-mipmapping-compare-2.jpg" title="">
+<h1 id="右键菜单"><a href="#右键菜单" class="headerlink" title="右键菜单"></a>右键菜单</h1><p>使用新的文式来绘制右键菜单，使得 Flash 与 HTML5 的右键菜单更一致，同时支持自定义。</p>
+<img src="/post/krpano-1-16/krpano116-new-contextmenu.jpg" alt="krpano116-new-contextmenu.jpg" title="">
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;WebGL-的支持&quot;&gt;&lt;a href=&quot;#WebGL-的支持&quot; class=&quot;headerlink&quot; title=&quot;WebGL 的支持&quot;&gt;&lt;/a&gt;WebGL 的支持&lt;/h2&gt;&lt;p&gt;使用 WebGL 取代之前的 CSS-3D 引擎，从而实现了鱼眼、小行星等，同时比 
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
