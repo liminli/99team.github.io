@@ -1,14 +1,14 @@
 title: 99Team
 subtitle: "99Team"
 keywords: "99Team"
-description: "99Team团队博客"
+description: "99Team 团队博客"
 author: 99Team
 language: zh-CN
 timezone: UTC
-url: http://krpano.milly.me
+url: https://99team.github.io/
 root: /
-permalink: news/:year/:month/:day/:title/
-archive_dir: news
+permalink: post/:title/
+archive_dir: archives
 code_dir: downloads/code
 new_post_name: :year-:month-:day-:title.md
 post_asset_folder: true # 启用Asset文件夹
@@ -18,6 +18,22 @@ highlight:
   enable: true
   line_number: false
 per_page: 0
+
+# 内容存档
+# npm install hexo-generator-archive --S
+archive_generator:
+  per_page: 10
+  yearly: true
+  monthly: true
+  daily: false
+
+# RSS Feed
+# npm i hexo-generator-feed -S
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
 
 # 主题
 theme: hueman
