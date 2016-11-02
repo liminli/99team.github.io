@@ -26,4 +26,4 @@ theme: hueman
 deploy:
   type: git
   repo: git@github.com:99team/99team.github.io.git
-  branch: gh-pages
+  branch: master
